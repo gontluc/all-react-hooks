@@ -1,0 +1,15 @@
+html {
+  --blue: #61dafb;
+  --grey: #282c34;
+  --light-grey: #5B6578;
+
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}

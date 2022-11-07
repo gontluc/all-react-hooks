@@ -1,0 +1,37 @@
+nav {
+    position: fixed;
+    top: var(--menu-top);
+    width: 80%;
+    height: 200px;
+    background-color: var(--light-grey);    
+    z-index: -10;
+    transition: all .5s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    padding: 100px 10%;
+}
+
+.nav-link {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--blue);
+    transition: color .2s ease-in-out;
+}
+
+nav.smaller {
+    height: 100px;
+    padding: 50px 10%;
+}
+
+nav.smaller .nav-link {
+    font-size: 22px;
+}

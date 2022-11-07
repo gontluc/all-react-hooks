@@ -1,0 +1,89 @@
+.header-container {
+    position: relative;
+    z-index: 10;
+
+    /* Header.js handles @media() */
+    --header-height: 200px;
+    --menu-top: -200px;
+}
+
+header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: all .6s ease-in-out;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-logo {
+    width: 130px;
+    animation: logo-spin infinite 20s linear;
+    transition: all .6s ease-in-out;
+}
+
+h1 {
+    color: var(--blue);
+    font-size: 80px;
+    font-weight: 600;
+    transition: all .6s ease-in-out;
+}
+
+.drop-down-icon {
+    width: 60px;
+    margin-top: 40px;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+.smaller h1 {
+    font-size: 50px;
+}
+
+.smaller .react-logo {
+    width: 70px;
+}
+
+.smaller .drop-down-icon {
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.separation-line1 {
+    width: 70%;
+    margin: 0 15%;
+    padding-top: 190px;
+}
+
+.project-description {
+    padding: 95px 0;
+    font-size: 24px;
+    font-weight: 100;
+    color: var(--grey);
+    text-align: center;
+}
+
+.separation-line2 {
+    width: 70%;
+    margin: 0 15%;
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
