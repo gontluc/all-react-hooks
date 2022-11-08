@@ -23,6 +23,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .react-logo {
@@ -42,7 +43,6 @@ h1 {
     width: 60px;
     margin-top: 40px;
     margin-left: 40px;
-    cursor: pointer;
     transition: all .6s ease-in-out;
 }
 
@@ -67,16 +67,67 @@ h1 {
 }
 
 .project-description {
-    padding: 95px 0;
+    padding: 95px 20%;
     font-size: 24px;
     font-weight: 100;
     color: var(--grey);
     text-align: center;
+    letter-spacing: .02em;
+    line-height: 1.8em;
+}
+
+.project-description .react-blue {
+    color: var(--blue);
+    display: inline;
+    font-weight: normal;
+}
+
+.project-description .blue {
+    color: #0D5BE3;
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .green {
+    color: green;
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .orange {
+    color: rgb(255, 128, 0);
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .purple {
+    color: rgb(81, 0, 128);
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .red {
+    color: red;
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .yellow {
+    color: rgb(255, 204, 0);
+    display: inline;
+    font-weight: bold;
+}
+
+.project-description .pink {
+    color: rgb(227, 106, 153);
+    display: inline;
+    font-weight: bold;
 }
 
 .separation-line2 {
     width: 70%;
     margin: 0 15%;
+    margin-bottom: 50px;
 }
 
 @keyframes logo-spin {

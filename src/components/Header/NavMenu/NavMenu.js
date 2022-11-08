@@ -2,7 +2,11 @@ import './NavMenu.css'
 
 export default function NavMenu({ setToggleMenu, menu }) {
     return (
-        <nav onClick={() => setToggleMenu(false)} ref={menu}>
+        <nav 
+            onClick={() => setToggleMenu(false)} 
+            ref={menu}
+            onMouseLeave={ () => {setToggleMenu(false)}}
+        >
             <a href="#usestate"><code className='nav-link'>useState</code></a>
             <a href="#"><code className='nav-link'>useEffect</code></a>
             <a href="#"><code className='nav-link'>useContext</code></a>

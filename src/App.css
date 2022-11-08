@@ -2,7 +2,7 @@ html {
   --blue: #61dafb;
   --grey: #282c34;
   --light-grey: #5B6578;
-
+  cursor: default;
   scroll-behavior: smooth;
 }
 
@@ -12,4 +12,34 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+/* Shared style throughout hooks' components */
+
+.hook {
+  width: 70%;
+  margin: 50px 15%;
+  scroll-margin-top: calc(100px + 50px);
+}
+
+.hook-title {
+  color: var(--grey);
+  font-size: 40px;
+  font-weight: bold;
+  transition: all 2s ease-in-out;
+}
+
+.hook-description {
+  color: var(--grey);
+  font-size: 20px;
+  transition: all 2s ease-in-out;
+}
+
+.hook-description .highlight {
+  background-color: #FEF7E5;
+  padding: 2px 6px;
+}
+
+.code-snippet {
+  transition: all 2s ease-in-out;
 }
