@@ -20,6 +20,7 @@ nav {
     font-weight: 600;
     color: #fff;
     transition: all .5s ease-in-out;
+    user-select: none;
 }
 
 .nav-link:hover {

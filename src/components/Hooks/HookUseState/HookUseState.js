@@ -16,21 +16,64 @@ export default function HookUseState() {
             <h2 className="hook-title">useState</h2>
 
             <p className="hook-description">
-                We can use this Hook to represent the state <code className='highlight'>happy</code> of a component and a function to set the state <code className='highlight'>setHappy</code>.
+                The purpose of <code className="highlight">useState</code> is to handle reactive data. It re-renders the UI when data changes. We can set the state <code className='highlight'>happy</code> as the mood of our character Blue and use the function <code className='highlight'>setHappy</code> to change the mood when the button is clicked. We initialize the value with <code className="highlight">true</code> being the first state.
             </p>
 
-            <div className="code-snippet">code(add jsx object)</div>
+            <div className="code-snippet"><code>
+                <code className='purple'>const [</code>
+                <code className='orange'>happy</code>,
+                <code className='orange'> setHappy</code>
+                <code className='purple'>] </code>
+                <code className="blue"> = useState</code>
+                <code className='purple'>(</code>
+                <code className='orange'>true</code>
+                <code className='purple'>)</code>
+            </code></div>
+
+            <p className="hook-description">
+                We handle the button click event with <code className="highlight">setHappy</code> by changing the state of <code className="highlight">happy</code> everytime we click on the button.
+            </p>
+
+            <div className="code-snippet"><code>
+                &#60;
+                <code className='red'>div </code>
+                <code className='orange'>className</code>=
+                <code className="green">"button" </code>
+                <code className="orange">onClick</code>=
+                <code className="blue">&#123;</code>
+                <code className="yellow">() </code>
+                <code className="purple">=&#62; </code>
+                <code className="yellow">&#123;</code>
+                <br />
+                &emsp;&emsp;&emsp;&emsp;console.
+                <code className="blue">log</code>
+                <code className="purple">(</code>
+                <code className="green">`Mouth Toggle: </code>
+                <code className="blue">$&#123;</code>!
+                <code className="red">happy </code>?
+                <code className="green"> 'Happy' </code>:
+                <code className="green"> 'Sad' </code>
+                <code className="blue">&#125;</code>
+                <code className="green">`</code>
+                <code className="purple">)</code>
+                <br />
+                &emsp;&emsp;&emsp;&emsp;
+                <code className="blue">setHappy</code>
+                <code className="purple">(</code>!
+                <code className="red">happy</code>
+                <code className="purple">)</code>
+                <br />
+                <code className="yellow">&#125;</code>
+                <code className="blue">&#125;</code>&#62;
+            </code></div>
 
             <div className="code-visualized">
                 <div className="use-state-hook">
-                    <div 
-                        className="button" 
-                        onClick={() => {
-                            console.log(`Mouth Toggle: ${!happy ? 'Happy' : 'Sad'}`)
-                            setHappy(!happy)
-                            !happy && setRotationAngle(rotationAngle + 360)
-                        }}
-                    >
+                    <div className="button" onClick={() => {
+                        console.log(`Mouth Toggle: ${!happy ? 'Happy' : 'Sad'}`)
+                        setHappy(!happy)
+                        !happy && setRotationAngle(rotationAngle + 360)
+                    }}>
                         <code>Change my mood</code>
                     </div>
                     
@@ -44,8 +87,8 @@ export default function HookUseState() {
                         />
                         <img src={mouthless} alt="mouthless blue rainbow friends" className='mouthless'/>
                         <h3 className='blues-mood'>Hi! My name is Blue and I am {happy ? 'Happy :)' : 'Sad :('}</h3>
+                        
                     </div>
-                    
                 </div>
             </div>
         </section>

@@ -2,6 +2,7 @@ import './App.css';
 
 import Header from './components/Header/Header'
 import HookUseState from './components/Hooks/HookUseState/HookUseState'
+import HookUseEffect from './components/Hooks/HookUseEffect/HookUseEffect'
 import Footer from './components/Footer/Footer'
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     <>
       <Header />
       <HookUseState />
+      <HookUseEffect />
       <Footer />
     </>
   )

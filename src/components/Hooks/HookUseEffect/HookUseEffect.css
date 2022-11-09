@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+.use-effect-hook {
+    width: 100%;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.use-effect-hook .greens-hello {
+    font-family: 'Rubik Bubbles', cursive;
+    color: #008102;
+    font-size: 36px;
+    text-align: center;
+    width: 235px;
+}
+
+.use-effect-hook .images {
+    position: relative;
+}
+
+.use-effect-hook .tongue {
+    position: absolute;
+    top: 145px;
+    left: 375px;
+    animation: 2.5s infinite ease-in-out shake;
+    animation-delay: 2s;
+}
+
+.use-effect-hook .green {
+    width: 750px;
+}
+
+.use-effect-hook .clock {
+    width: 235px;
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(20deg) translate(10px, 15px);
+    }
+
+    4% {
+        transform: rotate(-20deg) translate(-10px, -15px);
+    }
+
+    7% {
+        transform: rotate(20deg) translate(10px, 15px);
+    }
+
+    10% {
+        transform: rotate(-20deg) translate(-10px, -15px);
+    }
+
+    14% {
+        transform: rotate(20deg) translate(10px, 15px);
+    }
+
+    17% {
+        transform: rotate(-20deg) translate(-10px, -15px);
+    }
+
+    20% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+
+    to {
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+@keyframes shake2 {
+    from {
+        transform: rotate(0deg) translate(0, 0);
+    }
+
+    20% {
+        transform: rotate(-20deg) translate(-5px, -5px);
+    }
+
+    30% {
+        transform: rotate(20deg) translate(5px, 5px);
+    }
+
+    to {
+        transform: rotate(0deg) translate(0, 0);
+    }
+}

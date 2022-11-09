@@ -26,20 +26,49 @@ a:visited {
   color: var(--grey);
   font-size: 40px;
   font-weight: bold;
-  transition: all 2s ease-in-out;
 }
 
 .hook-description {
   color: var(--grey);
   font-size: 20px;
-  transition: all 2s ease-in-out;
+  line-height: 1.6em;
 }
 
 .hook-description .highlight {
-  background-color: #FEF7E5;
+  background-color: #fff2d1;
   padding: 2px 6px;
 }
 
 .code-snippet {
-  transition: all 2s ease-in-out;
+  background-color: var(--grey);
+  padding: 20px 40px;
+  color: #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin: 40px 0;
+}
+
+.code-snippet .blue {
+  color: #65b8f3;
+}
+
+.code-snippet .orange {
+  color: #ebab7d;
+}
+
+.code-snippet .purple {
+  color: #cb88ed;
+}
+
+.code-snippet .red {
+  color: #ef736d;
+}
+
+.code-snippet .green {
+  color: #84d287;
+}
+
+.code-snippet .yellow {
+  color: #e7d320;
 }
