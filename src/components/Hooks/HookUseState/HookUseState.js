@@ -5,11 +5,19 @@ import './HookUseState.css'
 import mouthless from '../../../images/mouthless.png'
 import mouth from '../../../images/mouth.png'
 
+import Button from '../../Reusable/Button/Button'
+
 export default function HookUseState() {
 
     const [happy, setHappy] = useState(true)
 
     const [rotationAngle, setRotationAngle] = useState(0)
+
+    function onClickScript() {
+        console.log(`Mouth Toggle: ${!happy ? 'Happy' : 'Sad'}`)
+        setHappy(!happy)
+        !happy && setRotationAngle(rotationAngle + 360)
+    }
 
     return (
         <section id="usestate" className='hook'>
@@ -69,13 +77,7 @@ export default function HookUseState() {
 
             <div className="code-visualized">
                 <div className="use-state-hook">
-                    <div className="button" onClick={() => {
-                        console.log(`Mouth Toggle: ${!happy ? 'Happy' : 'Sad'}`)
-                        setHappy(!happy)
-                        !happy && setRotationAngle(rotationAngle + 360)
-                    }}>
-                        <code>Change my mood</code>
-                    </div>
+                    <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#0D5BE3"} borderColor={"#032B8C"} text={"Change my mood"}/>
                     
                     <div className="images">
                         <img src={mouth} alt="mouth" className='mouth' style={{transform: happy 

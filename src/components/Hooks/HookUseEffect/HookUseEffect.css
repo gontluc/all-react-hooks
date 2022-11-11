@@ -1,67 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
-
 .use-effect-hook {
     width: 100%;
     margin: 80px 0;
     display: flex;
     justify-content: center;
-}
-
-.use-effect-hook .greens-hello {
-    font-family: 'Rubik Bubbles', cursive;
-    color: #008102;
-    font-size: 36px;
-    text-align: center;
-    width: 235px;
+    align-items: center;
 }
 
 .use-effect-hook .images {
     position: relative;
 }
 
+.use-effect-hook .greens-hello {
+    font-family: 'Rubik Bubbles', cursive;
+    color: #008102;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    font-weight: normal;
+}
+
 .use-effect-hook .tongue {
     position: absolute;
     top: 145px;
     left: 375px;
-    animation: 2.5s infinite ease-in-out shake;
-    animation-delay: 2s;
+}
+
+.animate-tongue {
+    animation: .5s infinite ease-in-out shake-tongue;
 }
 
 .use-effect-hook .green {
     width: 750px;
 }
 
-.use-effect-hook .clock {
-    width: 235px;
+/* .animate-clock {
+    animation: .5s infinite ease-in-out shake-clock;
+} */
+
+.use-effect-hook .clock svg {
+    width: 150px;
+    margin-left: 40px;
 }
 
-@keyframes shake {
+@keyframes shake-tongue {
     from {
-        transform: rotate(20deg) translate(10px, 15px);
-    }
-
-    4% {
-        transform: rotate(-20deg) translate(-10px, -15px);
-    }
-
-    7% {
-        transform: rotate(20deg) translate(10px, 15px);
-    }
-
-    10% {
-        transform: rotate(-20deg) translate(-10px, -15px);
-    }
-
-    14% {
-        transform: rotate(20deg) translate(10px, 15px);
-    }
-
-    17% {
-        transform: rotate(-20deg) translate(-10px, -15px);
-    }
-
-    20% {
         transform: rotate(0deg) translate(0, 0);
+    }
+
+    16% {
+        transform: rotate(-20deg) translate(-10px, -15px);
+    }
+
+    32% {
+        transform: rotate(20deg) translate(10px, 15px);
+    }
+
+    48% {
+        transform: rotate(-20deg) translate(-10px, -15px);
+    }
+
+    64% {
+        transform: rotate(20deg) translate(10px, 15px);
+    }
+
+    80% {
+        transform: rotate(-20deg) translate(-10px, -15px);
     }
 
     to {
@@ -69,20 +74,32 @@
     }
 }
 
-@keyframes shake2 {
+/* @keyframes shake-clock {
     from {
-        transform: rotate(0deg) translate(0, 0);
+        transform: rotate(0deg);
     }
 
-    20% {
-        transform: rotate(-20deg) translate(-5px, -5px);
+    16% {
+        transform: rotate(-5deg);
     }
 
-    30% {
-        transform: rotate(20deg) translate(5px, 5px);
+    32% {
+        transform: rotate(5deg);
+    }
+
+    48% {
+        transform: rotate(-5deg);
+    }
+
+    64% {
+        transform: rotate(5deg);
+    }
+
+    80% {
+        transform: rotate(-5deg);
     }
 
     to {
-        transform: rotate(0deg) translate(0, 0);
+        transform: rotate(0deg);
     }
-}
+} */

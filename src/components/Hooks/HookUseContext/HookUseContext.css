@@ -1,0 +1,91 @@
+.use-context-hook {
+    width: 100%;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.use-context-hook .objectives-drawing {
+    font-family: 'Indie Flower', cursive;
+    margin-right: 55px;
+    font-weight: bold;
+    width: 336px;
+}
+
+.use-context-hook .objective {
+    font-size: 28px;
+    margin: 30px 0;
+}
+
+.use-context-hook .green-objective {
+    color: #2FB942;
+}
+
+.use-context-hook .red-objective {
+    color: #ec665f;
+}
+
+.use-context-hook .objectives-drawing strong {
+    font-weight: bold;
+}
+
+.use-context-hook .remove {
+    display: none;
+}
+
+.use-context-hook .images {
+    position: relative;
+}
+
+.use-context-hook .eyes-green {
+    position: absolute;
+    top: 14.5%;
+    left: 15.5%;
+    z-index: 2;
+    width: 335px;
+}
+
+.use-context-hook .mouth-green {
+    position: absolute;
+    top: 38.6%;
+    left: 26%;
+    z-index: 2;
+    width: 285px;
+}
+
+.use-context-hook .hands-green {
+    position: absolute;
+    bottom: 0;
+    left: 11.5%;
+    width: 400px;
+    z-index: 2;
+}
+
+.use-context-hook .body-green {
+    position: absolute;
+    top: 0;
+    left: 14%;
+    z-index: 1;
+}
+
+.use-context-hook .sketch-green {
+    width: 505px;
+    display: block;
+}
+
+.use-context-hook .hiden {
+    opacity: 0;
+}
+
+.use-context-hook .drawing-choice-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 55px;
+}
+
+.use-context-hook #drawing-choices {
+    margin-bottom: 50px;
+    width: min-content;
+}

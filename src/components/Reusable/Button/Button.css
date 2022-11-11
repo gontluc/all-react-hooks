@@ -1,0 +1,55 @@
+.button {
+    --btn-color: #fff;
+    --btn-bg-color: #0D5BE3;
+    --btn-border-color: #032B8C;
+
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    border: solid 10px var(--btn-border-color);
+    border-top: none;
+    border-left: none;
+    transition: all .6s ease-in-out;
+    user-select: none;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    top: -42px;
+    right: -42px;
+    background-color: #fff;
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    bottom: -42px;
+    left: -42px;
+    background-color: #fff;
+}
+
+.button:hover {
+    border-width: 5px;
+    transform: translate3d(5px, 5px , 0px);
+    margin-bottom: 5px;
+}
+
+.button:active {
+    border-width: 0;
+    transform: translate3d(10px, 10px , 0px);
+    margin-bottom: 10px;
+    transition: all .1s ease-in-out;
+}
