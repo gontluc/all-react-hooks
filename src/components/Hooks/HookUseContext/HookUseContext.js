@@ -102,7 +102,7 @@ function ObjectivesDrawing() {
                 <li className={`objective ${green.body ? 'green-objective' : 'red-objective'}`}>Body is <strong className={green.body ? 'remove' : ''}>NOT</strong> painted</li>
             </ul>
 
-            <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#0D5BE3"} borderColor={"#032B8C"} text={"Reset"} uniqueID={"btn3-usecontext"}/>
+            <Button onClickScript={onClickScript} text={"Reset"} uniqueClass={"btn3-usecontext"}/>
         </div>
     )
 }
@@ -144,7 +144,7 @@ function DrawingChoice() {
     return (
         <div className="drawing-choice-container">
             <select name="drawing-selection" id="drawing-choices" defaultValue={"default"} onChange={(e) => {setSelectedPaint(e.target.value)}}>
-                <option value="default" disabled hidden>Select</option>
+                <option value="default" disabled hidden>Select here</option>
                 <option value="eyes">Eyes</option>
                 <option value="mouth">Mouth</option>
                 <option value="hands">Hands</option>
@@ -152,8 +152,8 @@ function DrawingChoice() {
             </select>
 
             {!selectedPaint | !green[selectedPaint] 
-                ? <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#2FB942"} borderColor={"#089223"} text={"Paint"} uniqueID={"btn1-usecontext"}/>
-                : <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#ec665f"} borderColor={"#BB3730"} text={"Erase"} uniqueID={"btn2-usecontext"}/>
+                ? <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#2FB942"} borderColor={"#089223"} text={"Paint"} uniqueClass={"btn1-usecontext"}/>
+                : <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#ec665f"} borderColor={"#BB3730"} text={"Erase"} uniqueClass={"btn2-usecontext"}/>
             }
         </div>
     )

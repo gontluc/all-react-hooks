@@ -8,6 +8,7 @@ import HookUseState from './components/Hooks/HookUseState/HookUseState'
 import HookUseEffect from './components/Hooks/HookUseEffect/HookUseEffect'
 import HookUseContext from './components/Hooks/HookUseContext/HookUseContext'
 import HookUseReducer from './components/Hooks/HookUseReducer/HookUseReducer'
+import HookUseCallback from './components/Hooks/HookUseCallback/HookUseCallback'
 
 import Footer from './components/Footer/Footer'
 
@@ -55,6 +56,8 @@ export default function App() {
       </GreenContext.Provider>
 
       <HookUseReducer />
+
+      <HookUseCallback />
 
       <Footer />
     </>

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import './Button.css'
 
-export default function Button({ onClickScript, color, bgColor, borderColor, text, uniqueID }) {
+export default function Button({ onClickScript, color="#fff", bgColor="#0D5BE3", borderColor="#032B8C", text, uniqueClass }) {
 
     const button = useRef(null)
 
@@ -12,7 +12,7 @@ export default function Button({ onClickScript, color, bgColor, borderColor, tex
     })
 
     return (
-        <div className={`button ${uniqueID}`} ref={button} onClick={() => onClickScript()}>
+        <div className={`button ${uniqueClass}`} ref={button} onClick={() => onClickScript()}>
             <code>{text}</code>
         </div>
     )

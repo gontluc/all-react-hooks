@@ -5,4 +5,74 @@
     justify-content: center;
     align-items: center;
     user-select: none;
+    flex-direction: column;
+}
+
+.use-reducer-hook .visual-title {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    color: var(--grey);
+    font-size: 60px;
+    letter-spacing: 0.1em;
+}
+
+.use-reducer-hook .images {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.use-reducer-hook .red-ballon {
+    width: 300px;
+    cursor: crosshair;
+}
+
+.use-reducer-hook .green-ballon {
+    width: 300px;
+    transform: rotate(15deg);
+    cursor: crosshair;
+}
+
+.use-reducer-hook .blue-ballon {
+    width: 300px;
+    transform: rotate(25deg);
+    cursor: crosshair;
+}
+
+.use-reducer-hook .hides {
+    opacity: 0;
+}
+
+.use-reducer-hook .remove {
+    display: none;
+}
+
+.use-reducer-hook .img-container {
+    position: relative;
+}
+
+.use-reducer-hook .pow {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: appears-pow .7s ease-in-out forwards;
+    z-index: 2;
+}
+
+@keyframes appears-pow {
+    from {
+        opacity: 1;
+        transform: scale(1.6);
+    }
+
+    5% {
+        transform: scale(2);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.3) rotate(-5deg);
+    }
 }

@@ -1,6 +1,6 @@
 .button {
     --btn-color: #fff;
-    --btn-bg-color: #0D5BE3;
+    --btn-bg-color: #0d5be3;
     --btn-border-color: #032B8C;
 
     color: var(--btn-color);

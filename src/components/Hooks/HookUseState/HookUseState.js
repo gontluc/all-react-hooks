@@ -77,7 +77,7 @@ export default function HookUseState() {
 
             <div className="code-visualized">
                 <div className="use-state-hook">
-                    <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#0D5BE3"} borderColor={"#032B8C"} text={"Change my mood"} uniqueID={"btn1-usestate"}/>
+                    <Button onClickScript={onClickScript} text={"Change my mood"} uniqueClass={"btn1-usestate"}/>
                     
                     <div className="images">
                         <img src={mouth} alt="mouth" className='mouth' style={{transform: happy 
