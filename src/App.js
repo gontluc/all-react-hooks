@@ -3,16 +3,20 @@ import './App.css';
 import { useState, createContext, useEffect } from 'react';
 
 import Header from './components/Header/Header'
+
 import HookUseState from './components/Hooks/HookUseState/HookUseState'
 import HookUseEffect from './components/Hooks/HookUseEffect/HookUseEffect'
 import HookUseContext from './components/Hooks/HookUseContext/HookUseContext'
+import HookUseReducer from './components/Hooks/HookUseReducer/HookUseReducer'
+
 import Footer from './components/Footer/Footer'
 
+/* useContext Hook Section */
 export const GreenContext = createContext()
 
 export default function App() {
 
-  /* useContext Hook Section */
+  /* useContext Hook Section -- START */
   const [green, setGreen] = useState({
     'eyes': false,
     'mouth': false,
@@ -36,6 +40,7 @@ export default function App() {
   }, [green])
 
   const [completedTasks, setCompletedTasks] = useState(!!isCompleted())
+  /* useContext Hook Section -- END */
 
   return (
     <>
@@ -48,6 +53,8 @@ export default function App() {
       <GreenContext.Provider value={{green, setGreen, completedTasks}}>
         <HookUseContext />
       </GreenContext.Provider>
+
+      <HookUseReducer />
 
       <Footer />
     </>

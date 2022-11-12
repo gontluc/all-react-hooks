@@ -1,21 +1,40 @@
-.use-context-hook {
+.use-context-hook-title {
     width: 100%;
     margin: 80px 0;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    color: #2FB942;
+    font-size: 60px;
+    letter-spacing: 0.1em;
+}
+
+.use-context-hook {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .use-context-hook .objectives-drawing {
     font-family: 'Indie Flower', cursive;
     margin-right: 55px;
-    font-weight: bold;
     width: 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .use-context-hook .objective {
     font-size: 28px;
     margin: 30px 0;
+    font-weight: bold;
 }
 
 .use-context-hook .green-objective {
@@ -36,6 +55,19 @@
 
 .use-context-hook .images {
     position: relative;
+    border: 26px solid #500D0D;
+    border-radius: 10px;
+    outline: 4px solid #500D0D;
+    outline-offset: -28px;
+    transform: rotate(1.49deg) scale(0.8);
+}
+
+.use-context-hook .drawing-stand {
+    position: absolute;
+    top: 60%;
+    left: -15%;
+    z-index: -1;
+    transform: scale(0.8);
 }
 
 .use-context-hook .eyes-green {
@@ -56,7 +88,7 @@
 
 .use-context-hook .hands-green {
     position: absolute;
-    bottom: 0;
+    bottom: -0.1%;
     left: 11.5%;
     width: 400px;
     z-index: 2;
@@ -72,11 +104,35 @@
 .use-context-hook .sketch-green {
     width: 505px;
     display: block;
+    border-radius: 10px;
 }
 
 .use-context-hook .hiden {
-    opacity: 0;
+    filter: brightness(500%);
 }
+
+.use-context-hook .completed-text {
+    font-family: 'Indie Flower', cursive;
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    transform: rotate(-10deg);
+    color: #0D5BE3;
+    font-size: 150px;
+    animation: completed 2s ease-in-out forwards;
+    z-index: 10;
+}
+
+ @keyframes completed {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.7) rotate(-510deg);
+    }
+ }
 
 .use-context-hook .drawing-choice-container {
     width: 300px;
@@ -86,6 +142,29 @@
 }
 
 .use-context-hook #drawing-choices {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     width: min-content;
+    cursor: pointer;
+    padding: 10px 60px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--light-grey);
+    outline: none;
+    border: none;
+}
+
+.use-context-hook #drawing-choces:focus {
+    outline: none;
+}
+
+.use-context-hook .btn1-usecontext {
+    padding: 10px 50px;
+    margin-left: 20px;
+}
+
+.use-context-hook .btn2-usecontext {
+    padding: 10px 50px;
+    margin-left: 20px;
 }

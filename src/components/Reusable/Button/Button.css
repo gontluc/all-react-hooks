@@ -17,6 +17,7 @@
     user-select: none;
     width: min-content;
     white-space: nowrap;
+    height: 26.4px;
 }
 
 .button::before {

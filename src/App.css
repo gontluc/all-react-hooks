@@ -17,6 +17,24 @@ a:visited {
   color: inherit;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background: none;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--light-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue); 
+}
+
 /* Shared style throughout hooks' components */
 
 .hook {
@@ -73,5 +91,5 @@ a:visited {
 }
 
 .code-snippet .yellow {
-  color: #e7d320;
+  color: rgb(224, 197, 129);
 }
