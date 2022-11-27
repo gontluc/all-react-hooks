@@ -4,15 +4,16 @@ import bus from '../../../../images/bus.png'
 
 import { useEffect } from 'react'
 
-export default function Bus({ childrenSayGo }) {
+export default function Bus({ childrenSayGo, translateBus, activateDialogue }) {
 
     useEffect(() => {
-        console.log('Rendering Bus')
-    }, [childrenSayGo])
+        console.log('Rendered Bus')
+        activateDialogue()
+    }, [])
 
     return (
-        <div className="images">
-            <img src={bus} alt="school bus" />
+        <div className="images" style={{ transform: translateBus ? 'translateX(-2000px)' : 'translateX(0px)'}}>
+            <img src={bus} alt="school bus" className="bus-img"/>
 
             {childrenSayGo && 
                 <div className="lets-go-container">

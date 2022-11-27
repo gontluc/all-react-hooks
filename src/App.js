@@ -9,6 +9,7 @@ import HookUseEffect from './components/Hooks/HookUseEffect/HookUseEffect'
 import HookUseContext from './components/Hooks/HookUseContext/HookUseContext'
 import HookUseReducer from './components/Hooks/HookUseReducer/HookUseReducer'
 import HookUseCallback from './components/Hooks/HookUseCallback/HookUseCallback'
+import HookOther from './components/Hooks/HookOther/HookOther'
 
 import Footer from './components/Footer/Footer'
 
@@ -58,6 +59,8 @@ export default function App() {
       <HookUseReducer />
 
       <HookUseCallback />
+
+      <HookOther />
 
       <Footer />
     </>

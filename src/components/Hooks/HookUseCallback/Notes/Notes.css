@@ -1,0 +1,42 @@
+.use-callback-hook .notes {
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.use-callback-hook .notebook {
+    position: absolute;
+    width: 300px;
+    z-index: -1;
+    top: -90px;
+    left: -4%;
+}
+
+.use-callback-hook .notes-title {
+    list-style: none;
+    font-weight: bolder;
+}
+
+.use-callback-hook .blue-note {
+    color: #0D5BE3;
+    margin: 20px;
+}
+
+.use-callback-hook .green-note {
+    color: #089223;
+    margin: 20px;
+}
+
+.use-callback-hook .orange-note {
+    color: #ff8c00;
+    margin: 20px;
+}
+
+.use-callback-hook .purple-note {
+    color: #5b0de3;
+    margin: 20px;
+}

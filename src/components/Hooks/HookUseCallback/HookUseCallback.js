@@ -1,39 +1,77 @@
 import './HookUseCallback.css'
 
-import trafficLight from '../../../images/traffic-light.png'
-
 import Button from '../../Reusable/Button/Button'
-import Bus from './Bus/Bus'
 
-import { useCallback, useState, useEffect } from 'react'
+import Notes from './Notes/Notes'
+
+import { useCallback, useState } from 'react'
+
+import notepad1 from '../../../images/n1.png'
+import notepad2 from '../../../images/n2.jpg'
+import notepad3 from '../../../images/n3.png'
+import notepad4 from '../../../images/n4.png'
 
 export default function HookUseCallback() {
 
-    const [childrenSayGo, setChildrenSayGo] = useState(false)
+    const allNotes = [
+        {
+            'text': 'Blue is hungry',
+            'class': 'blue-note'
+        },
+        {
+            'text': 'Green is blind',
+            'class': 'green-note'
+        },
+        {
+            'text': 'Orange is fast',
+            'class': 'orange-note'
+        },
+        {
+            'text': 'Purple is hiding',
+            'class': 'purple-note'
+        }
+    ]
 
-    /* Set childrenSayGo to false after 3s everytime is toggled */
-    useEffect(() => {
-        childrenSayGo && setTimeout(() => {
-            setChildrenSayGo(false)
-        }, 3000)
-    }, [activateDialogue])
+    const allNotepads = [notepad1, notepad2, notepad3, notepad4]
 
-    function activateDialogue() {
-        setChildrenSayGo(true)
+    const [notes, setNotes] = useState([])
+
+    const [notepad, setNotepad] = useState(notepad1)
+
+    function changeNotepad() {
+        console.log('Changed Notepad')
+
+        const notepadIndex = () => {
+            let index = allNotepads.indexOf(notepad) + 1
+
+            if (index === allNotepads.length) {
+                index = 0
+            }
+
+            return index 
+        }
+
+        setNotepad(allNotepads[notepadIndex()])
     }
 
-    function moveBus() {
-        console.log('Move bus')
+    function addNote() {
+        console.log('Added note')
+        setNotes(allNotes.slice(0, notes.length + 1))
     }
 
-    const goWithCallback = useCallback(() => {
-        console.log('Going with Callback')
-        moveBus()
-    }, [])
+    function resetNotes() {
+        console.log('Resetted notes')
+        setNotes([])
+    }
 
-    const goWithoutCallback = () => {
-        console.log('Going without Callback')
-        moveBus()
+    const getNoteswithCallback = useCallback(() => {
+        console.log('Getting notes with Callback')
+        return notes
+    }, [notes])
+
+    function getNoteswithoutCallback() {
+        console.log('Getting notes without Callback')
+        return notes
     }
 
     return (
@@ -57,14 +95,14 @@ export default function HookUseCallback() {
 
             <div className="code-visualized">
                 <div className="use-callback-hook">
-                    <img src={trafficLight} alt="traffic light" />
 
-                    <Bus childrenSayGo={childrenSayGo}/>
+                    <Notes getNotes={getNoteswithCallback} notepad={notepad} withCallback={true}/>
+                    <Notes getNotes={getNoteswithoutCallback} notepad={notepad} withCallback={false}/>
 
                     <div className="btns">
-                        <Button onClickScript={activateDialogue} bgColor={"#2FB942"} borderColor={"#089223"} text={"Where are we going?"} uniqueClass={`btn1-usecallback`}/>
-                        <Button onClickScript={goWithCallback} text={"Go with callback!"} uniqueClass={`btn2-usecallback`}/>
-                        <Button onClickScript={goWithoutCallback} text={"Go without callback!"} uniqueClass={`btn3-usecallback`}/>
+                        <Button onClickScript={changeNotepad} bgColor={"#2FB942"} borderColor={"#089223"} text={"Change Notepad"} uniqueClass={`btn1-usecallback`}/>
+                        <Button onClickScript={addNote} text={"Add Note"} uniqueClass={`btn2-usecallback`}/>
+                        <Button onClickScript={resetNotes} bgColor={"#ec665f"} borderColor={"#BB3730"} text={"Reset Notes"} uniqueClass={`btn3-usecallback`}/>
                     </div>
                 </div>
             </div>

@@ -152,8 +152,8 @@ function DrawingChoice() {
             </select>
 
             {!selectedPaint | !green[selectedPaint] 
-                ? <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#2FB942"} borderColor={"#089223"} text={"Paint"} uniqueClass={"btn1-usecontext"}/>
-                : <Button onClickScript={onClickScript} color={"#fff"} bgColor={"#ec665f"} borderColor={"#BB3730"} text={"Erase"} uniqueClass={"btn2-usecontext"}/>
+                ? <Button onClickScript={onClickScript} bgColor={"#2FB942"} borderColor={"#089223"} text={"Paint"} uniqueClass={"btn1-usecontext"}/>
+                : <Button onClickScript={onClickScript} bgColor={"#ec665f"} borderColor={"#BB3730"} text={"Erase"} uniqueClass={"btn2-usecontext"}/>
             }
         </div>
     )
