@@ -1,18 +1,38 @@
-# maybe delete
+# All React Hooks
 
-logo.svg if not used
+https://
 
-setupTests() if not used
+<br>
 
-other files
+## Technologies
 
-# make it responsive
+React.js, CSS
 
-background-color: #050824;
-border: solid 10px #313450;
+<br>
 
-# check grammar mistakes
+## Pending
 
-# last hook: thank you! with img before footer do Thanks for your time! with green smilling img or other smiling img
+- Check all useEffects and see if they need cleanup functions
 
-# keep in mind resize imgs and optimize
+- Migrate project to Next.js
+
+    - Remove eslint
+
+    - Update to new react
+
+    - Remove jest testing
+
+- Make it responsive
+
+- Browser compatibility (besides chrome)
+
+- Resize imgs and optimize
+
+- Last hook: "thank you!" with img before footer. Do "Thanks for your time!" with Green smiling img or other smiling img
+
+<br>
+
+## Color inspirations
+
+- #050824
+- #313450

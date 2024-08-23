@@ -1,6 +1,6 @@
 import './Header.css'
 
-import logo from '../../logo.svg';
+import logo from '../../images/logo.svg';
 import arrow from '../../images/arrow-down.png';
 import line from '../../images/line.png'
 

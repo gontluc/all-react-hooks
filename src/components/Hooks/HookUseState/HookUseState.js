@@ -24,7 +24,7 @@ export default function HookUseState() {
             <h2 className="hook-title">useState</h2>
 
             <p className="hook-description">
-                The purpose of <code className="highlight">useState</code> is to handle reactive data. It re-renders the UI when data changes. We can set the state <code className='highlight'>happy</code> as the mood of our character Blue and use the function <code className='highlight'>setHappy</code> to change the mood when the button is clicked. We initialize the value with <code className="highlight">true</code> being the first state.
+                The purpose of <code className="highlight">useState</code> is to handle reactive data. It re-renders the UI when data changes. We can set the state <code className='highlight'>happy</code> as the mood of our character Blue and use the function <code className='highlight'>setHappy</code> to change the mood when the button is clicked. We initialize the state with a value of <code className="highlight">true</code>.
             </p>
 
             <div className="code-snippet"><code>
@@ -53,7 +53,7 @@ export default function HookUseState() {
                 <code className="purple">=&#62; </code>
                 <code className="yellow">&#123;</code>
                 <br />
-                &emsp;&emsp;&emsp;&emsp;console.
+                {/* &emsp;&emsp;&emsp;&emsp;console.
                 <code className="blue">log</code>
                 <code className="purple">(</code>
                 <code className="green">`Mouth Toggle: </code>
@@ -64,7 +64,7 @@ export default function HookUseState() {
                 <code className="blue">&#125;</code>
                 <code className="green">`</code>
                 <code className="purple">)</code>
-                <br />
+                <br /> */}
                 &emsp;&emsp;&emsp;&emsp;
                 <code className="blue">setHappy</code>
                 <code className="purple">(</code>!

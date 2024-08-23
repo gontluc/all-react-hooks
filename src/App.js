@@ -1,6 +1,6 @@
-import './App.css';
+import './App.css'
 
-import { useState, createContext, useEffect } from 'react';
+import { useState, createContext, useEffect } from 'react'
 
 import Header from './components/Header/Header'
 
@@ -18,51 +18,51 @@ export const GreenContext = createContext()
 
 export default function App() {
 
-  /* useContext Hook Section -- START */
-  const [green, setGreen] = useState({
-    'eyes': false,
-    'mouth': false,
-    'hands': false,
-    'body': false
-  })
+	/* useContext Hook Section -- START */
+	const [green, setGreen] = useState({
+		'eyes': false,
+		'mouth': false,
+		'hands': false,
+		'body': false
+	})
 
-  function isCompleted() {
-    const greenParts = Object.keys(green)
-    let completed = true
+	function isCompleted() {
+		const greenParts = Object.keys(green)
+		let completed = true
 
-    greenParts.forEach((part) => {
-        completed = completed & green[part] 
-    })
+		greenParts.forEach((part) => {
+			completed = completed & green[part]
+		})
 
-    return completed
-  }
+		return completed
+	}
 
-  useEffect(() => {
-    setCompletedTasks(!!isCompleted())
-  }, [green])
+	useEffect(() => {
+		setCompletedTasks(!!isCompleted())
+	}, [green])
 
-  const [completedTasks, setCompletedTasks] = useState(!!isCompleted())
-  /* useContext Hook Section -- END */
+	const [completedTasks, setCompletedTasks] = useState(!!isCompleted())
+	/* useContext Hook Section -- END */
 
-  return (
-    <>
-      <Header />
+	return (
+		<>
+			<Header />
 
-      <HookUseState />
+			<HookUseState />
 
-      <HookUseEffect />
+			<HookUseEffect />
 
-      <GreenContext.Provider value={{green, setGreen, completedTasks}}>
-        <HookUseContext />
-      </GreenContext.Provider>
+			<GreenContext.Provider value={{ green, setGreen, completedTasks }}>
+				<HookUseContext />
+			</GreenContext.Provider>
 
-      <HookUseReducer />
+			<HookUseReducer />
 
-      <HookUseCallback />
+			<HookUseCallback />
 
-      <HookOther />
+			<HookOther />
 
-      <Footer />
-    </>
-  )
+			<Footer />
+		</>
+	)
 }

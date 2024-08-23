@@ -2,94 +2,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
 html {
-  --blue: #61dafb;
-  --grey: #282c34;
-  --light-grey: #5B6578;
-  cursor: default;
-  scroll-behavior: smooth;
+    --blue: #61dafb;
+    --grey: #282c34;
+    --light-grey: #5B6578;
+    cursor: default;
+    scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:visited {
-  color: inherit;
+    color: inherit;
 }
 
 /* Scrollbar */
 
-::-webkit-scrollbar{
-  width: 7px;
+::-webkit-scrollbar {
+    width: 7px;
 }
 
-::-webkit-scrollbar-track{
-  background: none;
+::-webkit-scrollbar-track {
+    background: none;
 }
 
-::-webkit-scrollbar-thumb{
-  background-color: var(--light-grey);
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-grey);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue); 
+    background: var(--blue);
 }
 
 /* Shared style throughout hooks' components */
 
 .hook {
-  width: 70%;
-  margin: 50px 15%;
-  scroll-margin-top: calc(100px + 50px);
+    width: 70%;
+    margin: 50px 15%;
+    scroll-margin-top: calc(100px + 50px);
 }
 
 .hook-title {
-  color: var(--grey);
-  font-size: 40px;
-  font-weight: bold;
+    color: var(--grey);
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .hook-description {
-  color: var(--grey);
-  font-size: 20px;
-  line-height: 1.6em;
+    color: var(--grey);
+    font-size: 20px;
+    line-height: 1.6em;
 }
 
 .hook-description .highlight {
-  background-color: #fff2d1;
-  padding: 2px 6px;
+    background-color: #fff2d1;
+    padding: 2px 6px;
 }
 
 .code-snippet {
-  background-color: var(--grey);
-  padding: 20px 40px;
-  color: #ccc;
-  border-radius: 10px;
-  font-size: 20px;
-  line-height: 1.5em;
-  margin: 40px 0;
+    background-color: var(--grey);
+    padding: 20px 40px;
+    color: #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 40px 0;
 }
 
 .code-snippet .blue {
-  color: #65b8f3;
+    color: #65b8f3;
 }
 
 .code-snippet .orange {
-  color: #ebab7d;
+    color: #ebab7d;
 }
 
 .code-snippet .purple {
-  color: #cb88ed;
+    color: #cb88ed;
 }
 
 .code-snippet .red {
-  color: #ef736d;
+    color: #ef736d;
 }
 
 .code-snippet .green {
-  color: #84d287;
+    color: #84d287;
 }
 
 .code-snippet .yellow {
-  color: rgb(252, 218, 126);
+    color: rgb(252, 218, 126);
 }
