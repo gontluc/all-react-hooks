@@ -14,6 +14,10 @@ React.js, CSS
 
 - Check all useEffects and see if they need cleanup functions
 
+- Fix navbar toggle
+
+- Show react version footer and navbar
+
 - Migrate project to Next.js
 
     - Remove eslint
