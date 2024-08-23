@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://here/sitemap.xml
+Sitemap: https://all-react-hooks-eta.vercel.app/sitemap.xml
